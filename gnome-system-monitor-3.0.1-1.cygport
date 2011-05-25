@@ -1,0 +1,5 @@
+inherit gnome2
+
+
+PATCH_URI="3.0.1-as-needed.patch
+           3.0.1-compile.patch"
