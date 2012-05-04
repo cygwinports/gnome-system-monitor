@@ -30,3 +30,14 @@
  enum
  {
  	COL_FD,
+--- origsrc/gnome-system-monitor-3.4.1/src/procproperties.cpp	2012-04-16 19:17:13.000000000 -0500
++++ src/gnome-system-monitor-3.4.1/src/procproperties.cpp	2012-05-04 15:30:31.841269600 -0500
+@@ -29,6 +29,8 @@
+ #elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
++#elif !defined(HZ)
++#define HZ 100
+ #endif
+ 
+ #include "procman.h"

@@ -1,0 +1,11 @@
+--- origsrc/gnome-system-monitor-3.4.1/src/Makefile.am
++++ src/gnome-system-monitor-3.4.1/src/Makefile.am
+@@ -36,7 +36,7 @@ gnome_system_monitor_SOURCES = \
+         gsm_color_button.c gsm_color_button.h
+ 
+ 
+-gnome_system_monitor_LDADD = @PROCMAN_LIBS@ @SYSTEMD_LIBS@ libbacon.la
++gnome_system_monitor_LDADD = libbacon.la $(PROCMAN_LIBS) $(SYSTEMD_LIBS)
+ 
+ noinst_LTLIBRARIES = libbacon.la
+ libbacon_la_SOURCES = \
