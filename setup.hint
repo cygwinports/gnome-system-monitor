@@ -1,4 +1,0 @@
-category: Gnome
-requires: libcairo2 libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libglibmm2.4_1 libgtk3_0 libgtkmm3.0_1 libgtop2.0_7 libintl8 libpango1.0_0 librsvg2_2 libsigc2.0_0 libstdc++6 libwnck3_0 libxml2
-sdesc: "GNOME system monitor"
-ldesc: "GNOME system monitor"
