@@ -1,11 +1,10 @@
 inherit gnome2
 
 NAME="gnome-system-monitor"
-VERSION=3.6.1
+VERSION=3.8.2.1
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME system monitor"
 DESCRIPTION="GNOME system monitor"
 
-PATCH_URI="3.4.1-as-needed.patch
-           3.0.1-compile.patch"
+PATCH_URI="3.0.1-compile.patch"
