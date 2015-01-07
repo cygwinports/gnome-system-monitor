@@ -1,0 +1,42 @@
+--- origsrc/gnome-system-monitor-3.14.1/configure.ac	2014-10-13 13:32:32.000000000 -0500
++++ src/gnome-system-monitor-3.14.1/configure.ac	2015-01-06 16:55:43.000000000 -0600
+@@ -98,7 +98,7 @@ if test "$GCC" = "yes" -a "$set_more_war
+     -Wcast-align -Wsign-compare \
+     -std=gnu89 \
+     $CFLAGS"
+-    CXXFLAGS="-Wall -std=c++98 $CXXFLAGS"
++    CXXFLAGS="-Wall -std=gnu++98 $CXXFLAGS"
+ else
+     AC_MSG_RESULT(no)
+ fi
+--- origsrc/gnome-system-monitor-3.14.1/src/openfiles.cpp	2014-09-24 14:16:09.000000000 -0500
++++ src/gnome-system-monitor-3.14.1/src/openfiles.cpp	2015-01-06 16:55:43.000000000 -0600
+@@ -5,6 +5,7 @@
+ #include <glibtop/procopenfiles.h>
+ #include <sys/stat.h>
+ #include <netdb.h>
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+--- origsrc/gnome-system-monitor-3.14.1/src/procproperties.cpp	2014-09-24 14:16:09.000000000 -0500
++++ src/gnome-system-monitor-3.14.1/src/procproperties.cpp	2015-01-06 16:55:43.000000000 -0600
+@@ -29,6 +29,8 @@
+ #elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
++#elif !defined(HZ)
++#define HZ 100
+ #endif
+ 
+ #include "application.h"
+--- origsrc/gnome-system-monitor-3.14.1/src/proctable.cpp	2014-09-24 14:16:09.000000000 -0500
++++ src/gnome-system-monitor-3.14.1/src/proctable.cpp	2015-01-06 18:03:21.734395400 -0600
+@@ -21,6 +21,7 @@
+ #include <config.h>
+ 
+ 
++#define _GNU_SOURCE
+ #include <string.h>
+ #include <math.h>
+ #include <glib/gi18n.h>
