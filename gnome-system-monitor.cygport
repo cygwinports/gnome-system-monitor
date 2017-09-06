@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gnome-system-monitor"
-VERSION=3.22.2
+VERSION=3.24.0
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME system monitor"
@@ -9,4 +9,7 @@ DESCRIPTION="GNOME System Monitor gives users a graphical user interface for
 monitoring CPU, network, and memory activities as well as a way for viewing
 and stopping system processes."
 
-PATCH_URI="3.14.1-compile.patch"
+PATCH_URI="
+	3.14.1-compile.patch
+	3.24.0-cygwin-libtool.patch
+"

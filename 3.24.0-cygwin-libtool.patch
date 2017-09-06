@@ -1,0 +1,11 @@
+--- origsrc/gnome-system-monitor-3.24.0/src/Makefile.am	2017-03-21 01:34:16.000000000 -0500
++++ src/gnome-system-monitor-3.24.0/src/Makefile.am	2017-09-05 23:58:14.118032400 -0500
+@@ -46,7 +46,7 @@ gnome_system_monitor_SOURCES = \
+ 
+ # See legacy/Makefile.am for explanation
+ LDADD = \
+-	legacy/gsm-resources.o \
++	legacy/.libs/gsm-resources.o \
+ 	legacy/libgsmlegacy.la \
+ 	$(GSM_LIBS) \
+ 	$(SYSTEMD_LIBS) \
